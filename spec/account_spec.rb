@@ -9,7 +9,7 @@ describe Account do
     end
 
     it 'returns empty statement when there are no transactions' do
-      expect(@account.statement).to eq "date || credit || debit || balance\n"
+      expect{@account.statement}.to output("date || credit || debit || balance\n").to_stdout
     end
 
     it 'has a starting balance of 0' do
@@ -56,7 +56,7 @@ describe Account do
         
         it 'returns the statement header with each item from the @history array' do
             @account.instance_variable_set(:@history, [{date: "2020-04-19", credit: 10, debit: 0, balance: 10}, {date: "2020-04-18", credit: 0, debit: 10, balance: 0}, {date: "2020-04-18", credit: 30, debit: 0, balance: 30}])
-            expect(@account.statement).to eq "date || credit || debit || balance\n2020-04-19 || 10 || 0 || 10\n2020-04-18 || 0 || 10 || 0\n2020-04-18 || 30 || 0 || 30\n"
+            expect{@account.statement}.to output("date || credit || debit || balance\n2020-04-19 || 10 || 0 || 10\n2020-04-18 || 0 || 10 || 0\n2020-04-18 || 30 || 0 || 30\n").to_stdout
         end
 
     end

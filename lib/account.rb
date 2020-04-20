@@ -12,7 +12,7 @@ class Account
         @history.each do |h|
             statement_text += "#{h[:date]} || #{h[:credit]} || #{h[:debit]} || #{h[:balance]}\n"
         end
-        return statement_text
+        puts statement_text
     end
 
     def deposit(amount)
