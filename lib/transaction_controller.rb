@@ -11,9 +11,9 @@ class TransactionController
 
     def createTransaction(value)
         if value >= 0
-            return Transaction.new(credit: value, debit: nil, balance: calcBalance(value))
+            return Transaction.new(credit: value, debit: "", balance: calcBalance(value))
         else
-            return Transaction.new(credit: nil,debit: value, balance: calcBalance(value))
+            return Transaction.new(credit: "", debit: value, balance: calcBalance(-(value)))
         end
     end
 
@@ -24,6 +24,5 @@ class TransactionController
             return value
         end
     end
-
 
 end

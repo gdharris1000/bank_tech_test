@@ -7,7 +7,6 @@ describe TransactionController do
     end
 
     it 'initialises with an empty history array' do
-       
         expect(@transactionController.history).to eq []
     end
 
@@ -22,7 +21,7 @@ describe TransactionController do
     end
 
     it 'add transaction to history' do
-        transaction1 = instance_double("Transaction", :credit => 10, :debit => nil, :balance => 10)
+        transaction1 = instance_double("Transaction", :credit => 10, :debit => "", :balance => 10)
         @transactionController.stub(:createTransaction) {transaction1}
         @transactionController.addToHistory(10)
         expect(@transactionController.history.length).to eq 1
