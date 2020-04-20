@@ -11,6 +11,7 @@ class Account
 
     def deposit(amount)
         @balance = @balance + amount
+        @history.push({date: Date.today.to_s, credit: amount, debit: 0, balance: @balance})
     end
 
 end
