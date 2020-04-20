@@ -25,6 +25,4 @@ class Account
         @history.push({date: Date.today.to_s, credit: 0, debit: amount, balance: @balance})
     end
 
-
-
 end
