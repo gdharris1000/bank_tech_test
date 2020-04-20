@@ -1,25 +1,29 @@
-## Specification
+# Bank Tech Test
+## Challenge specification: 
+https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
-### Requirements
+### Summary
+An application where a user and deposit, withdraw and see a statment from an account.
 
-* You should be able to interact with your code via a REPL like IRB or the JavaScript console.  (You don't need to implement a command line interface that takes input from STDIN.)
-* Deposits, withdrawal.
-* Account statement (date, amount, balance) printing.
-* Data can be kept in memory (it doesn't need to be stored to a database or anything).
+## Features
 
-### Acceptance criteria
+- A user can create an account
+- A user can deposit a numerical vaule into that account
+- A user can withdraw a numerical value from that account
+- A user can view a statment showing the date, amount and balance of the account for each transaction
 
-**Given** a client makes a deposit of 1000 on 10-01-2012  
-**And** a deposit of 2000 on 13-01-2012  
-**And** a withdrawal of 500 on 14-01-2012  
-**When** she prints her bank statement  
-**Then** she would see
+## Approach
+The application was built using Ruby and run using IRB.
+There is a single class containing deposit, withdrawal and statement methods.
 
-```
-date || credit || debit || balance
-14/01/2012 || || 500.00 || 2500.00
-13/01/2012 || 2000.00 || || 3000.00
-10/01/2012 || 1000.00 || || 1000.00
+## Testing
+
+## Rspec
+
+In terminal, run rspec to check all the tests are passing
+
+```bash
+$ rspec
 ```
 
 ### Feature Test
@@ -31,8 +35,58 @@ account.deposit(1000)
 account.deposit(2000)
 account.withdraw(500)
 account.statement()
-account.deposit(1000)
-account.deposit(2000)
-account.withdraw(500)
-account.statement()
 ```
+Expected output:
+
+```
+date || credit || debit || balance
+2020-04-20 || 1000 || 0 || 1000
+2020-04-20 || 2000 || 0 || 3000
+2020-04-20 || 0 || 500 || 2500
+```
+
+## Setup
+
+In terminal:
+
+```bash
+$ bundle install
+```
+
+##Running the application
+
+![app running in irb](images/irb.png)
+
+- Start IRB
+```bash
+$ irb -r './lib/account.rb'
+```
+
+- Create an account
+```ruby
+account = Account.new
+```
+- Deposit into the account
+```ruby
+account.deposit(1000)
+```
+
+- Withdraw from the account
+
+```ruby
+account.withdraw(500)
+```
+
+- View Statement
+
+```ruby
+account.statement
+```
+
+Output:
+```
+date || credit || debit || balance
+2020-04-20 || 1000 || 0 || 1000
+2020-04-20 || 0 || 500 || 500
+```
+
