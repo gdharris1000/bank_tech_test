@@ -25,8 +25,12 @@ date || credit || debit || balance
 ### Feature Test
 
 ```
-irb -r lib/account.rb
+irb -r './lib/account.rb'
 account = Account.new
+account.deposit(1000)
+account.deposit(2000)
+account.withdraw(500)
+account.statement()
 account.deposit(1000)
 account.deposit(2000)
 account.withdraw(500)
