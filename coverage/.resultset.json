@@ -3,6 +3,8 @@
     "coverage": {
       "/Users/garethharris/Projects/bank_tech_test/spec/account_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -22,7 +24,6 @@
           null,
           null,
           1,
-          null,
           1,
           2,
           2,
@@ -34,7 +35,6 @@
           null,
           1,
           2,
-          null,
           null,
           null,
           null
@@ -42,6 +42,8 @@
       },
       "/Users/garethharris/Projects/bank_tech_test/lib/account.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           1,
@@ -63,12 +65,13 @@
           2,
           2,
           null,
-          null,
           null
         ]
       },
       "/Users/garethharris/Projects/bank_tech_test/lib/transaction_controller.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -97,30 +100,30 @@
           4,
           null,
           null,
-          null,
           null
         ]
       },
       "/Users/garethharris/Projects/bank_tech_test/lib/transaction.rb": {
         "lines": [
+          null,
+          null,
+          1,
           1,
           null,
           1,
-          null,
-          1,
           7,
           7,
           7,
           7,
-          null,
           null,
           null
         ]
       },
       "/Users/garethharris/Projects/bank_tech_test/lib/statement.rb": {
         "lines": [
-          1,
           null,
+          null,
+          1,
           1,
           null,
           1,
@@ -138,13 +141,13 @@
           null,
           4,
           null,
-          null,
-          null,
           null
         ]
       },
       "/Users/garethharris/Projects/bank_tech_test/spec/feature_test_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           1,
           null,
@@ -177,7 +180,6 @@
           1,
           null,
           null,
-          null,
           1,
           1,
           1,
@@ -192,10 +194,11 @@
       },
       "/Users/garethharris/Projects/bank_tech_test/spec/statement_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          1,
           1,
           2,
           2,
@@ -216,10 +219,11 @@
       },
       "/Users/garethharris/Projects/bank_tech_test/spec/transaction_controller_spec.rb": {
         "lines": [
-          1,
+          null,
           null,
           1,
           null,
+          1,
           1,
           4,
           null,
@@ -249,6 +253,8 @@
       },
       "/Users/garethharris/Projects/bank_tech_test/spec/transaction_spec.rb": {
         "lines": [
+          null,
+          null,
           1,
           null,
           1,
@@ -262,6 +268,6 @@
         ]
       }
     },
-    "timestamp": 1587466160
+    "timestamp": 1587466419
   }
 }

@@ -14,7 +14,8 @@ An application where a user and deposit, withdraw and see a statment from an acc
 
 ## Approach
 The application was built using Ruby and run using IRB.
-There is a single class containing deposit, withdrawal and statement methods.
+
+![class diagram](images/classes.png)
 
 ## Testing
 
@@ -40,9 +41,9 @@ Expected output:
 
 ```
 date || credit || debit || balance
-2020-04-20 || 1000 || 0 || 1000
-2020-04-20 || 2000 || 0 || 3000
-2020-04-20 || 0 || 500 || 2500
+2020-04-20 || 1000.00 ||  || 1000.00
+2020-04-20 || 2000.00 ||  || 3000.00
+2020-04-20 ||  || 500.00 || 2500.00
 ```
 
 ## Setup
@@ -53,7 +54,7 @@ In terminal:
 $ bundle install
 ```
 
-##Running the application
+## Running the application
 
 ![app running in irb](images/irb.png)
 
