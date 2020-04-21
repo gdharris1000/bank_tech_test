@@ -5,8 +5,8 @@ require_relative './transaction_controller'
 require_relative './statement'
 
 class Account
-  def initialize
-    @transactionController = TransactionController.new
+  def initialize(transactionController = TransactionController.new)
+    @transactionController = transactionController
   end
 
   def deposit(amount)
@@ -17,8 +17,7 @@ class Account
     @transactionController.addToHistory(-amount)
   end
 
-  def statement
-    statement = Statement.new(@transactionController.history)
+  def statement(statement = Statement.new(@transactionController.history))
     puts statement.generate
   end
 end
