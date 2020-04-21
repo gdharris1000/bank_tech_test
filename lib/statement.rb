@@ -1,5 +1,7 @@
 class Statement
 
+    attr_reader :history 
+    
     def initialize(history)
         @history = history
     end
@@ -12,7 +14,7 @@ class Statement
             debit = h.debit != "" ? ('%.2f' % h.debit.to_f) : ""
             statementText += "#{h.date} || #{credit} || #{debit} || #{'%.2f' % h.balance.to_f}\n"
         end
-        
+
         return statementText
     end
 

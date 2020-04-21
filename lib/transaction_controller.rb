@@ -1,3 +1,5 @@
+require_relative './transaction'
+
 class TransactionController
     attr_reader :history
 
@@ -13,7 +15,7 @@ class TransactionController
         if value >= 0
             return Transaction.new(credit: value, debit: "", balance: calcBalance(value))
         else
-            return Transaction.new(credit: "", debit: value, balance: calcBalance(-(value)))
+            return Transaction.new(credit: "", debit: value, balance: calcBalance(value))
         end
     end
 

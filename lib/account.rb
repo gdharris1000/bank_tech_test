@@ -1,26 +1,23 @@
 require 'date'
+require_relative './transaction_controller'
+require_relative './statement'
+
 class Account
   def initialize
-    @balance = 0
-    @history = []
-  end
-
-  def statement
-    statement_text = "date || credit || debit || balance\n"
-
-    @history.each do |h|
-      statement_text += "#{h[:date]} || #{h[:credit]} || #{h[:debit]} || #{h[:balance]}\n"
-    end
-    puts statement_text
+    @transactionController = TransactionController.new
   end
 
   def deposit(amount)
-    @balance += amount
-    @history.push({ date: Date.today.to_s, credit: amount, debit: 0, balance: @balance })
+    @transactionController.addToHistory(amount)
   end
 
   def withdraw(amount)
-    @balance -= amount
-    @history.push({ date: Date.today.to_s, credit: 0, debit: amount, balance: @balance })
+    @transactionController.addToHistory(-(amount))
   end
+
+  def statement
+    statement = Statement.new(@transactionController.history)
+    puts statement.generate
+  end
+
 end
