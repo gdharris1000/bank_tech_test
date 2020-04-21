@@ -14,7 +14,7 @@
       <img src="./assets/0.12.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2020-04-21T11:53:39+01:00">2020-04-21T11:53:39+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2020-04-21T12:06:59+01:00">2020-04-21T12:06:59+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -128,7 +128,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a034c38c13c5dcc9bee8d2f58369d1d6c0c0cc7e" class="src_link" title="spec/feature_test_spec.rb">spec/feature_test_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">44</td>
+            <td class="cell--number">45</td>
             <td class="cell--number">28</td>
             <td class="cell--number">28</td>
             <td class="cell--number">0</td>
@@ -2013,7 +2013,7 @@
 
             
 
-            <code class="ruby">      Timecop.freeze(Time.local(2020, 4, 19)) do</code>
+            <code class="ruby">        Timecop.freeze(Time.local(2020, 4, 19)) do</code>
           </li>
         </div>
       
@@ -2024,7 +2024,7 @@
 
             
 
-            <code class="ruby">        @account.withdraw(10)</code>
+            <code class="ruby">            @account.withdraw(10)</code>
           </li>
         </div>
       
@@ -2035,7 +2035,7 @@
 
             
 
-            <code class="ruby">        expect(@account.instance_variable_get(:@transactionController).history[0].date).to eq &#39;2020-04-19&#39;</code>
+            <code class="ruby">            expect(@account.instance_variable_get(:@transactionController).history[0].date).to eq &#39;2020-04-19&#39;</code>
           </li>
         </div>
       
@@ -2046,7 +2046,7 @@
 
             
 
-            <code class="ruby">        expect(@account.instance_variable_get(:@transactionController).history[0].credit).to eq &#39;&#39;</code>
+            <code class="ruby">            expect(@account.instance_variable_get(:@transactionController).history[0].credit).to eq &#39;&#39;</code>
           </li>
         </div>
       
@@ -2057,7 +2057,7 @@
 
             
 
-            <code class="ruby">        expect(@account.instance_variable_get(:@transactionController).history[0].debit).to eq(-10)</code>
+            <code class="ruby">            expect(@account.instance_variable_get(:@transactionController).history[0].debit).to eq(-10)</code>
           </li>
         </div>
       
@@ -2068,7 +2068,7 @@
 
             
 
-            <code class="ruby">        expect(@account.instance_variable_get(:@transactionController).history[0].balance).to eq(-10)      end</code>
+            <code class="ruby">            expect(@account.instance_variable_get(:@transactionController).history[0].balance).to eq(-10)      </code>
           </li>
         </div>
       
@@ -2079,7 +2079,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -2090,18 +2090,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="35">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="35">
+            
             
 
             
 
-            <code class="ruby">    it &#39;can view a statement from the account&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -2112,7 +2112,7 @@
 
             
 
-            <code class="ruby">      Timecop.freeze(Time.local(2020, 4, 19)) do</code>
+            <code class="ruby">    it &#39;can view a statement from the account&#39; do</code>
           </li>
         </div>
       
@@ -2123,7 +2123,7 @@
 
             
 
-            <code class="ruby">        @account.deposit(10)</code>
+            <code class="ruby">      Timecop.freeze(Time.local(2020, 4, 19)) do</code>
           </li>
         </div>
       
@@ -2134,7 +2134,7 @@
 
             
 
-            <code class="ruby">        @account.withdraw(10)</code>
+            <code class="ruby">        @account.deposit(10)</code>
           </li>
         </div>
       
@@ -2145,12 +2145,23 @@
 
             
 
+            <code class="ruby">        @account.withdraw(10)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="40">
+            <span class="hits">1</span>
+            
+
+            
+
             <code class="ruby">        @account.deposit(100)</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="40">
+          <li class="covered" data-hits="2" data-linenumber="41">
             <span class="hits">2</span>
             
 
@@ -2161,7 +2172,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="41">
+          <li class="never" data-hits="" data-linenumber="42">
             
             
 
@@ -2172,7 +2183,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="42">
+          <li class="never" data-hits="" data-linenumber="43">
             
             
 
@@ -2183,7 +2194,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="43">
+          <li class="never" data-hits="" data-linenumber="44">
             
             
 
@@ -2194,7 +2205,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="44">
+          <li class="never" data-hits="" data-linenumber="45">
             
             
 
