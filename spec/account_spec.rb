@@ -11,29 +11,27 @@ describe Account do
     end
   end
 
-  before(:each) do
-    transaction1 = instance_double('Transaction', date: '2020/04/01', credit: 10, debit: '', balance: 10)
-    @controller_double = double('TransactionController', :addToHistory => "added to history", :history => [transaction1])
-    @account = Account.new(@controller_double)
-  end
-
-  it 'returns a statement' do
-    statement_doube = double('Statement', :generate => "date || credit || debit || balance\n2020/04/01 || 10.00 ||  || 10.00\n")
-    expect { @account.statement( statement_doube) }.to output("date || credit || debit || balance\n2020/04/01 || 10.00 ||  || 10.00\n").to_stdout
-  end
-
-  context 'deposit and withdraw' do
+  context 'methods' do
     before(:each) do
-      controller_spy = spy('TransactionController')
-      @account.instance_variable_set(:@transactionController, controller_spy)
+      transaction1 = instance_double('Transaction', date: '2020/04/01', credit: 10, debit: '', balance: 10)
+      @controller_double = double('TransactionController', :addToHistory => "added to history", :history => [transaction1])
+      @account = Account.new(@controller_double)
     end
 
-    it 'user can deposit a value' do
-      expect ( @account.deposit(10) ).to eq "added to history"
+    it 'returns a statement' do
+      statement_double = double('Statement', :generate => "date || credit || debit || balance\n2020/04/01 || 10.00 ||  || 10.00\n")
+      expect { @account.statement( statement_double) }.to output("date || credit || debit || balance\n2020/04/01 || 10.00 ||  || 10.00\n").to_stdout
     end
 
-    it 'user can withdraw a value' do
-      expect ( @account.withdraw(10) ).to eq "added to history"
+    context 'deposit and withdraw' do
+      it 'user can deposit a value' do
+        expect( @account.deposit(10) ).to eq "added to history"
+      end
+
+      it 'user can withdraw a value' do
+        expect( @account.withdraw(10) ).to eq "added to history"
+      end
     end
   end
+  
 end
