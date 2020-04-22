@@ -5,8 +5,9 @@ require_relative './transaction'
 class TransactionController
   attr_reader :history
 
-  def initialize
+  def initialize(transaction_class = Transaction)
     @history = []
+    @transaction = transaction_class
   end
 
   def addToHistory(value)
@@ -15,9 +16,9 @@ class TransactionController
 
   def createTransaction(value)
     if value >= 0
-      Transaction.new(credit: value, debit: '', balance: calcBalance(value))
+      @transaction.new(credit: value, debit: '', balance: calcBalance(value))
     else
-      Transaction.new(credit: '', debit: value, balance: calcBalance(value))
+      @transaction.new(credit: '', debit: value, balance: calcBalance(value))
     end
   end
 

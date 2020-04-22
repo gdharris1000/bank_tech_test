@@ -4,7 +4,8 @@ require 'transaction_controller'
 
 describe TransactionController do
   before(:each) do
-    @transactionController = TransactionController.new
+    @transaction_class_double = double("Transaction", :new => "transaction created")
+    @transactionController = TransactionController.new(@transaction_class_double)
   end
 
   it 'initialises with an empty history array' do
@@ -18,7 +19,7 @@ describe TransactionController do
   end
 
   it 'creates a transaction' do
-    expect(@transactionController.createTransaction(2)).to be_a Transaction
+    expect(@transactionController.createTransaction(2)).to eq "transaction created"
   end
 
   it 'add transaction to history' do
