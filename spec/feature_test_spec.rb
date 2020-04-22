@@ -24,13 +24,13 @@ describe 'feature test' do
     end
 
     it 'can make a withdrawal from the account' do
-        Timecop.freeze(Time.local(2020, 4, 19)) do
-            @account.withdraw(10)
-            expect(@account.instance_variable_get(:@transactionController).history[0].date).to eq '2020-04-19'
-            expect(@account.instance_variable_get(:@transactionController).history[0].credit).to eq ''
-            expect(@account.instance_variable_get(:@transactionController).history[0].debit).to eq(-10)
-            expect(@account.instance_variable_get(:@transactionController).history[0].balance).to eq(-10)      
-        end
+      Timecop.freeze(Time.local(2020, 4, 19)) do
+        @account.withdraw(10)
+        expect(@account.instance_variable_get(:@transactionController).history[0].date).to eq '2020-04-19'
+        expect(@account.instance_variable_get(:@transactionController).history[0].credit).to eq ''
+        expect(@account.instance_variable_get(:@transactionController).history[0].debit).to eq(-10)
+        expect(@account.instance_variable_get(:@transactionController).history[0].balance).to eq(-10)
+      end
     end
 
     it 'can view a statement from the account' do
